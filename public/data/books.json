@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Le Petit Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "category": "Roman",
+    "year": 1943,
+    "available": true,
+    "cover": "/covers/petit-prince.jpg",
+    "summary": "Un aviateur échoué dans le désert rencontre un petit prince."
+  },
+  {
+    "id": 2,
+    "title": "Germinal",
+    "author": "Émile Zola",
+    "category": "Roman",
+    "year": 1885,
+    "available": false,
+    "cover": "/covers/germinal.jpg",
+    "summary": "La vie et la grève des mineurs du Nord à la fin du XIXe siècle."
+  },
+  {
+    "id": 3,
+    "title": "L'Étranger",
+    "author": "Albert Camus",
+    "category": "Roman",
+    "year": 1942,
+    "available": true,
+    "cover": "/covers/etranger.jpg",
+    "summary": "Meursault, un homme indifférent, est jugé après un meurtre sur une plage d'Alger."
+  },
+  {
+    "id": 4,
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "category": "Roman",
+    "year": 1862,
+    "available": true,
+    "cover": "/covers/miserables.jpg",
+    "summary": "Le destin de Jean Valjean, ancien forçat en quête de rédemption."
+  },
+  {
+    "id": 5,
+    "title": "Madame Bovary",
+    "author": "Gustave Flaubert",
+    "category": "Roman",
+    "year": 1857,
+    "available": false,
+    "cover": "/covers/bovary.jpg",
+    "summary": "Emma Bovary s'ennuie en province et rêve d'une autre vie."
+  },
+  {
+    "id": 6,
+    "title": "Harry Potter à l'école des sorciers",
+    "author": "J. K. Rowling",
+    "category": "Jeunesse",
+    "year": 1997,
+    "available": true,
+    "cover": "/covers/harry-potter.jpg",
+    "summary": "Un jeune orphelin découvre qu'il est sorcier et entre à Poudlard."
+  },
+  {
+    "id": 7,
+    "title": "Le Lion",
+    "author": "Joseph Kessel",
+    "category": "Jeunesse",
+    "year": 1958,
+    "available": true,
+    "cover": "/covers/le-lion.jpg",
+    "summary": "Au Kenya, une fillette vit une amitié hors du commun avec un lion."
+  },
+  {
+    "id": 8,
+    "title": "Matilda",
+    "author": "Roald Dahl",
+    "category": "Jeunesse",
+    "year": 1988,
+    "available": false,
+    "cover": "/covers/matilda.jpg",
+    "summary": "Une petite fille surdouée tient tête à ses parents et à une directrice terrible."
+  },
+  {
+    "id": 9,
+    "title": "Le Journal d'Anne Frank",
+    "author": "Anne Frank",
+    "category": "Jeunesse",
+    "year": 1947,
+    "available": true,
+    "cover": "/covers/anne-frank.jpg",
+    "summary": "Le journal d'une adolescente juive cachée à Amsterdam pendant la guerre."
+  },
+  {
+    "id": 10,
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "category": "Documentaire",
+    "year": 2011,
+    "available": true,
+    "cover": "/covers/sapiens.jpg",
+    "summary": "Une brève histoire de l'humanité, de la préhistoire à nos jours."
+  },
+  {
+    "id": 11,
+    "title": "Une brève histoire du temps",
+    "author": "Stephen Hawking",
+    "category": "Documentaire",
+    "year": 1988,
+    "available": false,
+    "cover": "/covers/histoire-du-temps.jpg",
+    "summary": "Du big bang aux trous noirs, la cosmologie expliquée simplement."
+  },
+  {
+    "id": 12,
+    "title": "L'Art de la guerre",
+    "author": "Sun Tzu",
+    "category": "Documentaire",
+    "year": -500,
+    "available": true,
+    "cover": "/covers/art-de-la-guerre.jpg",
+    "summary": "Un traité de stratégie militaire chinois devenu un classique."
+  }
+]
