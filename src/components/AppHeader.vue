@@ -46,9 +46,12 @@
   padding-block: var(--space-2);
   border-bottom: 2px solid transparent;
 }
-.app-header__link:hover,
-.app-header__link.router-link-exact-active {
+.app-header__link:hover {
   border-bottom-color: currentColor;
+}
+.app-header__nav a.router-link-active {
+  font-weight: 700;
+  border-bottom: 2px solid currentColor;
 }
 .app-header :focus-visible {
   outline-color: var(--color-primary-contrast);

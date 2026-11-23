@@ -27,3 +27,17 @@ Conditions : `npm run build` puis `npm run preview` (http://localhost:4173), Lig
 - [ ] Remplacer les couvertures provisoires par les vraies (WebP de préférence).
 - [ ] Remplacer les textes provisoires du pied de page (adresse, horaires).
 - [ ] Créer les pages Catalogue et Contact (séance 3) : les liens du menu ne mènent encore nulle part.
+
+---
+
+# Séance 3 — Audit des nouvelles pages (Lighthouse mobile, `npm run preview`)
+
+| Page | Performance | Accessibilité | Bonnes pratiques | SEO |
+|---|---|---|---|---|
+| /catalogue | ~80 | 100 (98 avant correction) | 100 | 100 |
+| /livres/3 | ~83 | 100 | 100 | 100 |
+| /contact | ~82 | 100 | 100 | 100 |
+
+Correction : ajout d'un `<h2>` (masqué visuellement) sur le catalogue, pour que l'ordre des titres ne saute pas du h1 au h3.
+
+À traiter en séance 5 : la performance des pages chargées à la demande (~80) vient du chargement en cascade (fichier JS de la page, puis books.json). Pistes : précharger books.json, convertir les couvertures en WebP.

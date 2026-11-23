@@ -3,11 +3,12 @@ import { ref, computed, onMounted } from 'vue'
 import SearchBar from '@/components/SearchBar.vue'
 import BookList from '@/components/BookList.vue'
 import BaseButton from '@/components/BaseButton.vue'
+import BookListSkeleton from '@/components/BookListSkeleton.vue'
+import { useBooks } from '@/composables/useBooks'
 
-const books = ref([])
+const { books, loading, error, load } = useBooks()
 const query = ref('')
 const favorites = ref([])
-const loading = ref(true)
 
 // Recherche sur le titre ou l'auteur, 8 livres maximum
 const featured = computed(() => {
@@ -48,11 +49,7 @@ function toggleFavorite(id) {
     : [...favorites.value, id]
 }
 
-onMounted(async () => {
-  const res = await fetch(import.meta.env.BASE_URL + 'data/books.json')
-  books.value = await res.json()
-  loading.value = false
-})
+onMounted(load)
 </script>
 
 <template>
@@ -67,13 +64,12 @@ onMounted(async () => {
   <div class="container home">
     <section aria-labelledby="coeur">
       <h2 id="coeur" class="home__title">Coups de cœur</h2>
-      <p v-if="books.length && !featured.length" role="status">
-        Aucun livre ne correspond à « {{ query }} ».
-      </p>
-      <!-- Emplacements réservés pendant le chargement : évite que la page « saute » -->
-      <ul v-if="loading" class="skeleton" aria-hidden="true">
-        <li v-for="n in 8" :key="n" class="skeleton__card"></li>
-      </ul>
+      <BookListSkeleton v-if="loading" />
+      <div v-else-if="error" role="alert">
+        <p>Impossible de charger les livres ({{ error }}).</p>
+        <BaseButton type="button" @click="load">Réessayer</BaseButton>
+      </div>
+      <p v-else-if="!featured.length" role="status">Aucun livre ne correspond à « {{ query }} ».</p>
       <BookList v-else :books="featured" :favorites="favorites" @toggle-favorite="toggleFavorite" />
       <p class="home__more">
         <BaseButton to="/catalogue" variant="ghost">Voir tout le catalogue</BaseButton>
@@ -173,21 +169,5 @@ onMounted(async () => {
   margin: var(--space-1) 0 0;
   color: var(--color-text-muted);
   font-size: var(--fs-200);
-}
-.skeleton {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: var(--space-6);
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-}
-.skeleton__card {
-  aspect-ratio: 2 / 3;
-  padding-bottom: 13rem;
-  box-sizing: content-box;
-  border-radius: var(--radius);
-  background: var(--color-border);
-  opacity: 0.4;
 }
 </style>
