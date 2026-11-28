@@ -1,9 +1,7 @@
 # Biblio+
 
-Refonte du site de la bibliothèque municipale (projet fil rouge Vue.js).
-
-- Site en ligne : https://XXXX.netlify.app  ← à remplacer après le déploiement Netlify
-- Dépôt : https://github.com/VOTRE-COMPTE/biblio-plus
+- Site en ligne : https://bibliopluss.netlify.app/
+- Dépôt : https://github.com/BLVCKNESSS/biblio-plus
 
 ## Lancer le projet
 

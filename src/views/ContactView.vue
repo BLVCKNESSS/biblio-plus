@@ -101,9 +101,9 @@ function reset() {
 
       <aside class="contact__panel contact__infos" aria-labelledby="infos">
         <h2 id="infos" class="contact__subtitle">Infos pratiques</h2>
-        <p><strong>Adresse</strong><br />[Adresse de la bibliothèque]</p>
-        <p><strong>Horaires</strong><br />Du mardi au samedi · [Horaires]</p>
-        <p><strong>Téléphone</strong><br />[Téléphone]</p>
+        <p><strong>Adresse</strong><br />[IUC Logbessou]</p>
+        <p><strong>Horaires</strong><br />Du mardi au samedi · [9h - 17h]</p>
+        <p><strong>Téléphone</strong><br />[6 00 99 88 77]</p>
       </aside>
     </div>
   </div>

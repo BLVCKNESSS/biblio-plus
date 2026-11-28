@@ -4,12 +4,12 @@
       <div class="app-footer__col">
         <p class="app-footer__title">Biblio+</p>
         <p>Bibliothèque municipale</p>
-        <p>[Adresse de la bibliothèque]</p>
+        <p>[Iuc Logbessou]</p>
       </div>
       <div class="app-footer__col">
         <p class="app-footer__title">Horaires</p>
         <p>Du mardi au samedi</p>
-        <p>[Horaires d'ouverture]</p>
+        <p>[9h - 17h]</p>
       </div>
       <div class="app-footer__col">
         <p class="app-footer__title">Nous écrire</p>
