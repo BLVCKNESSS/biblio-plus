@@ -52,3 +52,12 @@ h3 {
 .skip-link:focus {
   top: var(--space-2);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
