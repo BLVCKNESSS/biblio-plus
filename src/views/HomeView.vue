@@ -6,6 +6,7 @@ import BaseButton from '@/components/BaseButton.vue'
 import BookListSkeleton from '@/components/BookListSkeleton.vue'
 import { useBooks } from '@/composables/useBooks'
 import { useFavoritesStore } from '@/stores/favorites'
+import BookCarousel from '@/components/BookCarousel.vue'
 
 const { books, loading, error, load } = useBooks()
 const favorites = useFavoritesStore()
@@ -39,6 +40,10 @@ onMounted(load)
   </section>
 
   <div class="container home">
+    <section v-if="!loading && !error && books.length" aria-labelledby="selection">
+      <h2 id="selection" class="home__title">Sélection de la semaine</h2>
+      <BookCarousel :items="books.slice(0, 5)" />
+    </section>
     <section aria-labelledby="coeur">
       <h2 id="coeur" class="home__title">Coups de cœur</h2>
       <BookListSkeleton v-if="loading" />

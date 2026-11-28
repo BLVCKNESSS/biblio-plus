@@ -5,12 +5,14 @@ import BookList from '@/components/BookList.vue'
 import BookListSkeleton from '@/components/BookListSkeleton.vue'
 import BaseButton from '@/components/BaseButton.vue'
 import { useFavoritesStore } from '@/stores/favorites'
+import { useDebounce } from '@/composables/useDebounce'
 
 const { books, loading, error, load } = useBooks()
 const favorites = useFavoritesStore()
 onMounted(load)
 
-const query = ref('')
+const rawQuery = ref('')
+const query = useDebounce(rawQuery, 300)
 const category = ref('')
 const sort = ref('title')
 const page = ref(1)
@@ -47,7 +49,7 @@ watch([query, category, sort], () => (page.value = 1)) // retour page 1
     <div class="filters">
       <div class="filters__field filters__field--grow">
         <label for="cat-q">Recherche</label>
-        <input id="cat-q" v-model="query" type="search" placeholder="Titre, auteur…" />
+        <input id="cat-q" v-model="rawQuery" type="search" placeholder="Titre, auteur…" />
       </div>
       <div class="filters__field">
         <label for="cat-category">Catégorie</label>

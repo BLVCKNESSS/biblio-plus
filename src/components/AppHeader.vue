@@ -1,5 +1,6 @@
 <script setup>
 import { useFavoritesStore } from '@/stores/favorites'
+import NavDropdown from '@/components/NavDropdown.vue'
 
 const favorites = useFavoritesStore()
 </script>
@@ -21,6 +22,8 @@ const favorites = useFavoritesStore()
             </RouterLink>
           </li>
           <li><RouterLink to="/contact" class="app-header__link">Contact</RouterLink></li>
+          <li><RouterLink to="/contact" class="app-header__link">Contact</RouterLink></li>
+          <NavDropdown />
         </ul>
       </nav>
     </div>
