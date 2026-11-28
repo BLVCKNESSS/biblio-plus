@@ -21,7 +21,7 @@ const prev = () => (index.value = (index.value - 1 + props.items.length) % props
     <button class="carousel__btn" type="button" aria-label="Livre précédent" @click="prev">‹</button>
     <div class="carousel__stage">
       <Transition name="slide" mode="out-in">
-        <BookCard v-if="current" :key="current.id" :book="current" />
+        <BookCard v-if="current" :key="current.id" :book="current" priority />
       </Transition>
     </div>
     <button class="carousel__btn" type="button" aria-label="Livre suivant" @click="next">›</button>

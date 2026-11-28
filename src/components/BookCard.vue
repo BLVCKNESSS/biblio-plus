@@ -2,6 +2,7 @@
 defineProps({
   book: { type: Object, required: true },
   favorite: { type: Boolean, default: false },
+  priority: { type: Boolean, default: false }, // image visible dès l'arrivée : pas de lazy
 })
 const emit = defineEmits(['toggle-favorite'])
 </script>
@@ -14,7 +15,7 @@ const emit = defineEmits(['toggle-favorite'])
       width="200"
       height="300"
       :alt="'Couverture de ' + book.title"
-      loading="lazy"
+      :loading="priority ? 'eager' : 'lazy'"
     />
     <div class="book-card__body">
       <h3 class="book-card__title">

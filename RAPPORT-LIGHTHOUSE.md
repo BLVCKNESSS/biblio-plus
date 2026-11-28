@@ -41,3 +41,28 @@ Conditions : `npm run build` puis `npm run preview` (http://localhost:4173), Lig
 Correction : ajout d'un `<h2>` (masqué visuellement) sur le catalogue, pour que l'ordre des titres ne saute pas du h1 au h3.
 
 À traiter en séance 5 : la performance des pages chargées à la demande (~80) vient du chargement en cascade (fichier JS de la page, puis books.json). Pistes : précharger books.json, convertir les couvertures en WebP.
+
+---
+
+# Séance 5 · Mesures avant / après optimisation
+
+| Page | Catégorie | Avant | Après |
+|---|---|---|---|
+| Accueil | Performance | … | … |
+| Accueil | Accessibilité | … | … |
+| Accueil | Bonnes pratiques | … | … |
+| Accueil | SEO | … | … |
+| Catalogue | Performance | … | … |
+| Catalogue | Accessibilité | … | … |
+| Catalogue | Bonnes pratiques | … | … |
+| Catalogue | SEO | … | … |
+
+## Corrections apportées
+
+1. … (ex. couvertures converties en WebP : XX Mo → XX Ko)
+2. …
+3. …
+
+## Écarts restants et justification
+
+…

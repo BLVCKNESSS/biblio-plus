@@ -6,7 +6,7 @@
     "category": "Roman",
     "year": 1943,
     "available": true,
-    "cover": "/covers/petit-prince.jpg",
+    "cover": "/covers/petit-prince.webp",
     "summary": "Un aviateur échoué dans le désert rencontre un petit prince."
   },
   {
@@ -16,7 +16,7 @@
     "category": "Roman",
     "year": 1885,
     "available": false,
-    "cover": "/covers/germinal.jpg",
+    "cover": "/covers/germinal.webp",
     "summary": "La vie et la grève des mineurs du Nord à la fin du XIXe siècle."
   },
   {
@@ -26,7 +26,7 @@
     "category": "Roman",
     "year": 1942,
     "available": true,
-    "cover": "/covers/etranger.jpg",
+    "cover": "/covers/etranger.webp",
     "summary": "Meursault, un homme indifférent, est jugé après un meurtre sur une plage d'Alger."
   },
   {
@@ -36,7 +36,7 @@
     "category": "Roman",
     "year": 1862,
     "available": true,
-    "cover": "/covers/miserables.jpg",
+    "cover": "/covers/miserables.webp",
     "summary": "Le destin de Jean Valjean, ancien forçat en quête de rédemption."
   },
   {
@@ -46,7 +46,7 @@
     "category": "Roman",
     "year": 1857,
     "available": false,
-    "cover": "/covers/bovary.jpg",
+    "cover": "/covers/bovary.webp",
     "summary": "Emma Bovary s'ennuie en province et rêve d'une autre vie."
   },
   {
@@ -56,7 +56,7 @@
     "category": "Jeunesse",
     "year": 1997,
     "available": true,
-    "cover": "/covers/harry-potter.jpg",
+    "cover": "/covers/harry-potter.webp",
     "summary": "Un jeune orphelin découvre qu'il est sorcier et entre à Poudlard."
   },
   {
@@ -66,7 +66,7 @@
     "category": "Jeunesse",
     "year": 1958,
     "available": true,
-    "cover": "/covers/le-lion.jpg",
+    "cover": "/covers/le-lion.webp",
     "summary": "Au Kenya, une fillette vit une amitié hors du commun avec un lion."
   },
   {
@@ -76,7 +76,7 @@
     "category": "Jeunesse",
     "year": 1988,
     "available": false,
-    "cover": "/covers/matilda.jpg",
+    "cover": "/covers/matilda.webp",
     "summary": "Une petite fille surdouée tient tête à ses parents et à une directrice terrible."
   },
   {
@@ -86,7 +86,7 @@
     "category": "Jeunesse",
     "year": 1947,
     "available": true,
-    "cover": "/covers/anne-frank.jpg",
+    "cover": "/covers/anne-frank.webp",
     "summary": "Le journal d'une adolescente juive cachée à Amsterdam pendant la guerre."
   },
   {
@@ -96,7 +96,7 @@
     "category": "Documentaire",
     "year": 2011,
     "available": true,
-    "cover": "/covers/sapiens.jpg",
+    "cover": "/covers/sapiens.webp",
     "summary": "Une brève histoire de l'humanité, de la préhistoire à nos jours."
   },
   {
@@ -106,7 +106,7 @@
     "category": "Documentaire",
     "year": 1988,
     "available": false,
-    "cover": "/covers/histoire-du-temps.jpg",
+    "cover": "/covers/histoire-du-temps.webp",
     "summary": "Du big bang aux trous noirs, la cosmologie expliquée simplement."
   },
   {
@@ -116,7 +116,7 @@
     "category": "Documentaire",
     "year": -500,
     "available": true,
-    "cover": "/covers/art-de-la-guerre.jpg",
+    "cover": "/covers/art-de-la-guerre.webp",
     "summary": "Un traité de stratégie militaire chinois devenu un classique."
   }
 ]
