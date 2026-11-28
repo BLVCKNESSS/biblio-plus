@@ -5,10 +5,11 @@ import BookList from '@/components/BookList.vue'
 import BaseButton from '@/components/BaseButton.vue'
 import BookListSkeleton from '@/components/BookListSkeleton.vue'
 import { useBooks } from '@/composables/useBooks'
+import { useFavoritesStore } from '@/stores/favorites'
 
 const { books, loading, error, load } = useBooks()
+const favorites = useFavoritesStore()
 const query = ref('')
-const favorites = ref([])
 
 // Recherche sur le titre ou l'auteur, 8 livres maximum
 const featured = computed(() => {
@@ -20,34 +21,10 @@ const featured = computed(() => {
 
 // Exemples d'événements (à remplacer par ceux de la bibliothèque)
 const events = [
-  {
-    id: 1,
-    day: '06',
-    month: 'déc.',
-    title: 'Heure du conte pour les 4-7 ans',
-    info: 'Samedi · 10h30 · Espace jeunesse',
-  },
-  {
-    id: 2,
-    day: '11',
-    month: 'déc.',
-    title: 'Club de lecture : romans classiques',
-    info: 'Jeudi · 18h00 · Salle 1',
-  },
-  {
-    id: 3,
-    day: '17',
-    month: 'déc.',
-    title: 'Atelier numérique : réserver en ligne',
-    info: 'Mercredi · 14h00 · Espace multimédia',
-  },
+  { id: 1, day: '06', month: 'déc.', title: 'Heure du conte pour les 4-7 ans', info: 'Samedi · 10h30 · Espace jeunesse' },
+  { id: 2, day: '11', month: 'déc.', title: 'Club de lecture : romans classiques', info: 'Jeudi · 18h00 · Salle 1' },
+  { id: 3, day: '17', month: 'déc.', title: 'Atelier numérique : réserver en ligne', info: 'Mercredi · 14h00 · Espace multimédia' },
 ]
-
-function toggleFavorite(id) {
-  favorites.value = favorites.value.includes(id)
-    ? favorites.value.filter((f) => f !== id)
-    : [...favorites.value, id]
-}
 
 onMounted(load)
 </script>
@@ -70,7 +47,7 @@ onMounted(load)
         <BaseButton type="button" @click="load">Réessayer</BaseButton>
       </div>
       <p v-else-if="!featured.length" role="status">Aucun livre ne correspond à « {{ query }} ».</p>
-      <BookList v-else :books="featured" :favorites="favorites" @toggle-favorite="toggleFavorite" />
+      <BookList v-else :books="featured" :favorites="favorites.ids" @toggle-favorite="favorites.toggle" />
       <p class="home__more">
         <BaseButton to="/catalogue" variant="ghost">Voir tout le catalogue</BaseButton>
       </p>

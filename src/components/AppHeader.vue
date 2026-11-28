@@ -1,3 +1,9 @@
+<script setup>
+import { useFavoritesStore } from '@/stores/favorites'
+
+const favorites = useFavoritesStore()
+</script>
+
 <template>
   <header class="app-header">
     <div class="app-header__inner container">
@@ -6,6 +12,14 @@
         <ul class="app-header__nav">
           <li><RouterLink to="/" class="app-header__link">Accueil</RouterLink></li>
           <li><RouterLink to="/catalogue" class="app-header__link">Catalogue</RouterLink></li>
+          <li>
+            <RouterLink to="/favoris" class="app-header__link">
+              Favoris
+              <span class="app-header__badge">
+                {{ favorites.count }}<span class="sr-only"> favori(s)</span>
+              </span>
+            </RouterLink>
+          </li>
           <li><RouterLink to="/contact" class="app-header__link">Contact</RouterLink></li>
         </ul>
       </nav>
@@ -52,6 +66,18 @@
 .app-header__nav a.router-link-active {
   font-weight: 700;
   border-bottom: 2px solid currentColor;
+}
+.app-header__badge {
+  display: inline-block;
+  min-width: 1.5rem;
+  margin-left: var(--space-1);
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-contrast);
+  color: var(--color-primary);
+  font-size: var(--fs-200);
+  font-weight: 700;
+  text-align: center;
 }
 .app-header :focus-visible {
   outline-color: var(--color-primary-contrast);

@@ -26,6 +26,12 @@ const router = createRouter({
       meta: { title: 'Contact' },
     },
     {
+      path: '/favoris',
+      name: 'favorites',
+      component: () => import('@/views/FavoritesView.vue'), // lazy loading
+      meta: { title: 'Mes favoris' },
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('@/views/NotFoundView.vue'),

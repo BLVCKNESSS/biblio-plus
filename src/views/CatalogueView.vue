@@ -4,8 +4,10 @@ import { useBooks } from '@/composables/useBooks'
 import BookList from '@/components/BookList.vue'
 import BookListSkeleton from '@/components/BookListSkeleton.vue'
 import BaseButton from '@/components/BaseButton.vue'
+import { useFavoritesStore } from '@/stores/favorites'
 
 const { books, loading, error, load } = useBooks()
+const favorites = useFavoritesStore()
 onMounted(load)
 
 const query = ref('')
@@ -78,7 +80,7 @@ watch([query, category, sort], () => (page.value = 1)) // retour page 1
     </div>
     <p v-else-if="!filtered.length" class="catalogue__message">Aucun résultat.</p>
     <template v-else>
-      <BookList :books="visible" />
+      <BookList :books="visible" :favorites="favorites.ids" @toggle-favorite="favorites.toggle" />
       <nav v-if="pageCount > 1" class="pagination" aria-label="Pagination">
         <BaseButton variant="ghost" type="button" :disabled="page === 1" @click="page--">
           ← Précédent
