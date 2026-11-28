@@ -20,12 +20,25 @@ defineEmits(['toggle-favorite'])
 </template>
 
 <style scoped>
+/* Mobile-first : le style de base vise le plus petit écran */
 .book-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   gap: var(--space-6);
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40em) {
+  /* ≈ 640 px : tablette portrait */
+  .book-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  /* ≈ 1024 px : ordinateur */
+  .book-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>

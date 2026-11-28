@@ -16,7 +16,17 @@ defineProps({ count: { type: Number, default: 8 } })
   padding: 0;
   display: grid;
   gap: var(--space-6);
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: 1fr;
+}
+@media (min-width: 40em) {
+  .skeleton {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64em) {
+  .skeleton {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .skeleton__card {
   aspect-ratio: 2 / 3;
